@@ -9,6 +9,7 @@
 ```
 - TMDb API Key
 - Node.js
+- [Optional] Docker 
 ```
 
 To run the application:
@@ -18,10 +19,19 @@ To run the application:
 3. You can now run the website using `npm run start` 
     - Or build the website using `npm run build` and host using `serve -s build` 
     - `.env` file will work in this situation
+4. Access the website on `http://localhost:3000`
+
+To run using docker:
+1. Clone the repo 
+2. Fill the `.env` file using `template.env`
+3. Run `docker-compose up`
+4. Access the website on `http://localhost:3000`
 
 To complete:
 - [ ] Sticky bottom for Card Action below each result 
-
+- [ ] Replace in-line styling
+- [x] Add Docker support
+- [x] Remove unnecessary dependencies
 ### Some screenshot below: 
 
 ![main](screenshots/main.png)
