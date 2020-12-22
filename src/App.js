@@ -1,6 +1,5 @@
 import React, { useReducer } from "react";
 import { Container, Button, CircularProgress, Grid, Typography } from "@material-ui/core";
-import SearchBar from "material-ui-search-bar";
 import { reducer } from "./mainReducer";
 import { MovieList } from "./MovieComponent";
 import { ErrorModal } from "./ErrorModal";
@@ -52,7 +51,20 @@ export const App = () => {
 		<ResultContext.Provider value={{ result, removeMovie }}>
 			<Container maxWidth="md" style={{ marginTop: "2em" }}>
 				<form onSubmit={fetchData} noValidate autoComplete="off">
-					<SearchBar value={query} label="Search" onChange={(event) => dispatch({ type: "SET_FIELD", target: "query", value: event })} />
+					<input
+						type="text"
+						name="query"
+						value={query}
+						onChange={(event) => dispatch({ type: "SET_FIELD", target: "query", value: event.target.value })}
+						placeholder="Search"
+						style={{
+							width: "100%",
+							height: "2em",
+							margin: "1em",
+							padding: "0.5em",
+							borderRadius: "10px",
+						}}
+					/>
 					<Grid container direction="row" justify="flex-end" alignItems="flex-start">
 						<Button
 							style={{ marginTop: "0.5em" }}
@@ -66,7 +78,12 @@ export const App = () => {
 						</Button>
 					</Grid>
 				</form>
-				<Grid container direction="column" justify="center" alignItems="center" style={{ marginTop: "2em", marginBottom: "2em" }}>
+				<Grid
+					container
+					direction="column"
+					justify="center"
+					alignItems="center"
+					style={{ marginTop: "2em", marginBottom: "2em" }}>
 					{showModal ? <ErrorModal errMsg={isError} /> : null}
 					{isLoading ? <CircularProgress /> : <MovieList />}
 				</Grid>
@@ -76,7 +93,10 @@ export const App = () => {
 				<Typography variant="h6" gutterBottom>
 					Powered by
 					<span>
-						<img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMBD Logo" srcset="" />{" "}
+						<img
+							src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+							alt="TMBD Logo"
+						/>
 					</span>
 				</Typography>
 				<Typography variant="overline" display="block" gutterBottom>

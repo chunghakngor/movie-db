@@ -9,7 +9,17 @@ const MovieCard = ({ id, original_title, poster_path, overview, release_date, vo
 	return (
 		<Card style={{ boxShadow: "3px 3px 5px 6px #ccc", height: "100%" }}>
 			<CardActionArea>
-				<CardMedia component="img" alt={original_title} height="400" image={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : "https://critics.io/img/movies/poster-placeholder.png"} title={original_title} />
+				<CardMedia
+					component="img"
+					alt={original_title}
+					height="400"
+					image={
+						poster_path
+							? `https://image.tmdb.org/t/p/w500${poster_path}`
+							: "https://critics.io/img/movies/poster-placeholder.png"
+					}
+					title={original_title}
+				/>
 				<CardContent>
 					<Typography gutterBottom variant="h5" component="h4">
 						{original_title}
@@ -24,7 +34,14 @@ const MovieCard = ({ id, original_title, poster_path, overview, release_date, vo
 						{overview.length > 200 ? <span>{overview.substring(0, 200)} ...</span> : overview}
 					</Typography>
 				</CardContent>
-				<hr style={{ border: 0, height: "1px", backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))", marginTop: "10px" }} />
+				<hr
+					style={{
+						border: 0,
+						height: "1px",
+						backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))",
+						marginTop: "10px",
+					}}
+				/>
 				<CardActions>
 					<Grid container direction="row" justify="space-around" alignItems="center">
 						<Grid item>
