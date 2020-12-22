@@ -19,6 +19,8 @@ To run the application:
     - Or build the website using `npm run build` and host using `serve -s build` 
     - `.env` file will work in this situation
 
+To complete:
+- [ ] Sticky bottom for Card Action below each result 
 
 ### Some screenshot below: 
 
