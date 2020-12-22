@@ -2,15 +2,14 @@
 <!-- Author: Chung Hak Ngor -->
 ## Implemented to understand React Hooks (useReducer) and Context API
 
-Requirements:
+<!-- Hosted on Github Pages -->
+## [Live Deployment](https://chunghakngor.github.io/movie-db/)
+
+### Requirements: 
 ```
 - TMDb API Key
 - Node.js
-- [Optional] Serve
 ```
-
-<!-- Hosted on Heroku -->
-Visit a the live website at [Simple React Movie Search](https://www.github.com/chunghakngor/movie_db)
 
 To run the application:
 1. Clone the repo and run `npm install` to install all the dependencies
@@ -22,3 +21,7 @@ To run the application:
 
 
 ### Some screenshot below: 
+
+![main](screenshots/main.png)
+![search](screenshots/search.png)
+![error](screenshots/error.png)
