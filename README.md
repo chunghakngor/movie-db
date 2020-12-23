@@ -26,7 +26,9 @@ To run using docker:
 2. Fill the `.env` file using `template.env`
 3. Run `docker-compose up`
 4. Access the website on `http://localhost:3000`
+
 or
+
 1. `docker pull chunghakngor/movie-db:0.1.0`
 2. `docker run -p 3000:3000 chunghakngor/movie-db:0.1.0`
 3. Access the website on `http://localhost:3000`
